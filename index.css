@@ -9,7 +9,7 @@ body.scrolled .top-anchor {
 /* Navigation Bar */
 
 #home {
-  background-color:  #473ca9;
+  background-color:  #5645ea;
   box-shadow: 
     inset 0 0 3vw rgb(81, 39, 169),
     inset 0 0 2vw rgb(111, 175, 230);
@@ -25,7 +25,7 @@ body.scrolled .top-anchor {
  .topdiv {
   position: absolute;
   right: 1%;
-  top: 8%;
+  top: 7%;
   display: flex;
   gap: 2%;
 }
@@ -35,7 +35,7 @@ body.scrolled .top-anchor {
   font-size: 2vw;
   width: 9vw;
   text-decoration: none;
-  text-shadow: 0.2vw 0.2vw rgb(51, 44, 124);
+  text-shadow: 0.2vw 0.2vw rgb(71, 56, 239);
   letter-spacing: 0;
   transition: letter-spacing 0.3s ease-in-out;
 }
@@ -52,7 +52,7 @@ body.scrolled .top-anchor {
   color: aliceblue;
   font-family: verdana;
   font-size: 3vw;
-  text-shadow: 0.2vw 0.2vw rgb(51, 44, 124);
+  text-shadow: 0.25vw 0.25vw rgb(71, 56, 239);
 }
 
 .profile_name .contact_info {
