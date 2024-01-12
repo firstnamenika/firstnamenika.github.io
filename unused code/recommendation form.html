@@ -1,0 +1,57 @@
+    <!-- Recommendation Form -->
+    <section id="contact">
+        <div class="flex_center">
+          <fieldset>
+            <legend class="introduction">Leave a Recommendation</legend>          
+            <input type="text" placeholder="Name (Optional)"> <br/>
+            <textarea id="new_recommendation" cols="500" rows="10" placeholder="Message"></textarea>
+            <div class="flex_center">
+              <button id="recommend_btn" onclick="addRecommendation()">Submit</button>
+            </div>
+          </fieldset>
+        </div>
+      </section>
+  
+      <div class="iconbutton">
+        <a href="#home">
+          <!--Add the code here for the logo to appear and the icon to be actionable-->
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" width="63px">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 11.25l-3-3m0 0l-3 3m3-3v7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>  
+      </a>
+      </div>
+  
+      <div class="popup" id="popup" class="flex_center">
+        <img src="https://static-00.iconduck.com/assets.00/thumbs-up-icon-512x512-auup5j58.png"/>
+        <h3>Thank you for leaving a recommendation!</h3>
+        <button onclick="showPopup(false)">Ok</button>
+      </div>
+
+          <!-- Recommendations -->
+    <section id="recommendations">
+      <h2>Recommendations</h2>
+      <div style="clear:both;"></div>
+      <div class="all_recommendations" id="all_recommendations">
+        <div class="recommendation">
+          <span>&#8220;</span>
+          Nika's coding skills are exceptional. 
+          She efficiently tackles complex problems, showing a deep understanding of algorithms. 
+          Her dedication to quality work and collaborative nature make him a valuable team member.
+          She takes initiative within a team and has potentials to lead the team.
+          <span>&#8221;</span>
+        </div>
+        <div class="recommendation">
+          <span>&#8220;</span>
+          Working with Nika is a pleasure. 
+        She brings creativity and precision to every project. 
+        Her ability to adapt to new technologies and deliver outstanding results is truly commendable.
+          <span>&#8221;</span>
+        </div>
+        <div class="recommendation">
+          <span>&#8220;</span>
+          Nika is an excellent communicator and problem-solver. 
+  Her attention to detail and commitment to delivering high-quality solutions make her a reliable and valued team member.
+  <span>&#8221;</span>
+        </div>
+      </div>
+    </section>

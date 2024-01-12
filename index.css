@@ -2,7 +2,7 @@ body {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-body.scrolled .top {
+body.scrolled .top-anchor {
   display: block;
 }
 
@@ -10,6 +10,12 @@ body.scrolled .top {
 
 #home {
   background-color:  #4637ca;
+  box-shadow: 
+    inset 0 0 30px rgb(10, 48, 81),
+    inset 30px 10px 10px rgb(10, 48, 81),
+    inset 10px 30px 10px rgb(10, 48, 81),
+    inset 10px 10px 10px 5px rgb(10, 48, 81),
+    inset 0 0 10px aliceblue;
   padding-bottom: 1cm;
   margin-left:-1cm;
   margin-right:-1cm;
@@ -21,8 +27,8 @@ body.scrolled .top {
 
  .topdiv {
   float:right;
-  padding-right: 2.5cm;
-  padding-top: 1cm;
+  padding-right: 5%;
+  padding-top: 1%;
 }
 
 .topmenu {
@@ -30,15 +36,14 @@ body.scrolled .top {
   margin: 10px;
   padding: 2px;
   font-size: 20px;
+  text-decoration: none;
+  text-shadow: 2px 2px rgb(51, 44, 124);
 }
 
 .topmenu:hover {
   color: aliceblue;
   font-weight: bolder;
-  text-decoration: underline;
-
 }
-
 
 .profile_name {
   float: left;
@@ -46,6 +51,7 @@ body.scrolled .top {
   color: aliceblue;
   font-family: verdana;
   font-size: 40px;
+  text-shadow: 2px 2px rgb(51, 44, 124);
 }
 
 .profile_name .contact_info {
@@ -59,6 +65,9 @@ body.scrolled .top {
   width:25px;
   margin-right: 10px;
   float:left;
+  box-shadow: 
+    inset 0 0 10px rgb(19, 67, 110),
+    0 0 10px rgb(19, 67, 110);
 }
 
 /* Titles */
@@ -185,9 +194,10 @@ h2 {
   margin-top: 30px;
   margin-left: 60px;
   margin-bottom: 8%;
-  display: flexbox;
+  display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
 #link {
@@ -204,23 +214,33 @@ h2 {
 .top{
   width: 48px;
   height: 48px;
-  border-radius: 100%;
+}
+
+.top-anchor {
+  display: none; /*flex*/
+}
+
+.top-anchor img {
   background-color: #4637ca;
+  width: 0.5in;
+  border-radius: 100%;
   box-shadow: 
-    inset 0 0 10px #6f65c4,
     3px 5px 5px  gray;
   color:aliceblue;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: monospace;
   font-weight: bolder;
-  font-size: smaller;
   text-decoration: none;
-  display: none; /*flex*/
-  align-items: center;
-  justify-content: center;
+  align-items: center;  
+  justify-content: center; 
   position: fixed;
   right: 3%;
   bottom: 3%;
   cursor: pointer;
+  transition:1s;
+}
+
+.top-anchor img:hover {
+  background-color: rgb(151, 144, 171);
 }
 
 
