@@ -17,6 +17,7 @@ function currentSlide(n) {
 
 function showSlides(n) {
     let slides = document.getElementsByClassName("project-card");
+    let images = document.getElementsByClassName("project-image");
     console.log("Number of slides:", slides.length);
   
     if (slides.length === 0) {
@@ -29,8 +30,11 @@ function showSlides(n) {
     console.log("Setting display to block for slide:", slideIndex);
     for (let i = 0; i < slides.length; i++) {
       slides[i].style.display = "none";
+      images[i].classList.remove('fade-in'); // Remove the fade-in class from all slides
     }
+  
     slides[slideIndex - 1].style.display = "block";
+    images[slideIndex - 1].classList.add('fade-in'); // Add the fade-in class to the current slide
   }
   
 
