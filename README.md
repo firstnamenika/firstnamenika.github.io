@@ -1,4 +1,8 @@
-This is a personal website that was written in vanilla CSS and vanilla JavaScript. It is a single page.
+# Personal website
 
-JavaScript is accounting for Home button to appear once a user scrolls a little.
+This is a single page personal website that is written in vanilla CSS and vanilla JavaScript.
+
+JavaScript is taking care of Home button appearance once a user scrolls down, as well as enables a slider in Projects section.
+
+The page is being actively updated. 
 
