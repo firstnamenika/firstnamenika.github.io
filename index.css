@@ -228,11 +228,11 @@ h2 {
 /* Fading animation */
 .fade-in {
   position: relative;
-  animation: fade 1s;
+  animation: fade 1s ease;
 }
 
 @keyframes fade {
-  0% { opacity: 0.75;}
+  0% { opacity: 0.8;}
   100% {opacity: 1;}
 }
 
@@ -327,12 +327,17 @@ h2 {
 /* Scroll to Top Button */
 
 .top {
+  display: none;
   width: 4vw;
   height: 4vw;
 }
 
+.top-appear {
+  animation: fade 1s ease;
+}
+
 .top-anchor {
-  display: none; /*flex*/
+  transition: 1s ease;
 }
 
 .top-anchor img {
@@ -356,11 +361,6 @@ h2 {
 
 .top-anchor img:hover {
   background-color: rgb(151, 144, 171);
-}
-
-body.scrolled .top-anchor {
-  transition: 1s ease;
-  display: block;
 }
 
 

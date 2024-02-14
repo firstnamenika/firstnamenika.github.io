@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function() {
   // Add slides
   var slideIndex = 1;
   showSlides(slideIndex);
@@ -33,23 +33,28 @@ function showSlides(n) {
       images[i].classList.remove('fade-in'); // Remove the fade-in class from all slides
     }
   
-    slides[slideIndex - 1].style.display = "block";
+    slides[slideIndex - 1].style.display = "block"; // Show a slide
     images[slideIndex - 1].classList.add('fade-in'); // Add the fade-in class to the current slide
   }
   
+function showTopAnchor() {
+  const topAnchor = document.getElementById('top');
+  
+  if (window.scrollY > 200) {
+    topAnchor.style.display = 'block'; // Show Top button
+    topAnchor.classList.add('top-appear'); // Add an effect to Top button
+  } else {
+    topAnchor.style.display = 'none'; // Hide Top button if scrolled less than 200
+    
+  }
+}
+
+window.onscroll =  showTopAnchor; // Show Top button if window is scrolled 
 
 
 
 
-window.onscroll = function() {
-  // Add or remove the 'scrolled' class based on scroll position
-  document.body.classList.toggle('scrolled', window.scrollY > 200);
-};
 
-// Smooth scroll to top when the anchor is clicked
-document.getElementById("top-anchor").addEventListener("click", function() {
-  document.body.scrollTop = 0; // For Safari
-  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
-});
+
 
 
