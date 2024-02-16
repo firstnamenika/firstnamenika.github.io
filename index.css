@@ -6,24 +6,23 @@ body {
 /* Navigation Bar */
 
  .topdiv {
-  border-bottom: 0.1vw solid #4637ca;
-  background: rgba(23, 28, 174, 0.222);
+  border-bottom: 0.1vw solid #524f7b;
+  background: #b0aabc;
   padding-left: 3vw;
   padding-right: 3vw;
   padding-top: 0.5vw;
   padding-bottom: 0.5vw;
   display: flex;
   justify-content: space-between;
-  transition: 1s ease;
 }
 
 .topdiv:hover {
-  background: rgba(23, 28, 174, 0.422);
-  transition: 1s ease;
+  background: linear-gradient(-65deg, #b0aabc, #877d95);
+  transition-duration: 5s ease;
 }
 
 .topmenu {
-  color: #4637ca;
+  color: #524f7b;
   font-size: 2vw;
   width: 8vw;
   text-decoration: none;
@@ -44,7 +43,7 @@ h2 {
   font-size: 5vw;
   text-align: center;
   float: left;
-  color: #4637ca;
+  color: #524f7b;
   margin: 3vw;
   margin-left: 6vw;
   margin-top: 4vw;
@@ -54,24 +53,48 @@ h2 {
 /* About Me */
 
 .container {
+  background: linear-gradient( -65deg, #a49fa4, #b0aabc, #877d95, #746a81);
+  background-size: 150% 150%;
+	animation: gradient 10s linear infinite;
+  border-bottom: 0.1vw solid #524f7b;
   display: flex;
-  padding-top: 2vw;
-  padding-bottom: 5vw;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 100%;
+	}
+  25% {
+    background-position: 40% 100%;
+  }
+	50% {
+		background-position: 100% 100%;
+	}
+  75% {
+    background-position: 40% 100%;
+  }
+	100% {
+		background-position: 0% 100%;
+	}
+}
+
+.image-div {
+  margin-left: 8vw;
 }
 
 #about-me{
-  padding-left: 1vw;
+  margin-left: -10vw;
 }
 
 #about-me h1 {
   font-size: 5vw;
   margin-top: 6vw;
-  color: #4637ca;
+  color: #524f7b;
 }
 
 #about-me p {
   font-size: 2vw;
-  color: rgb(161, 162, 163);
+  color: #c8c6cd;
   margin-top: -2vw;
 }
 
@@ -79,11 +102,12 @@ h2 {
   width: 48vw;
   height: fit-content;
   vertical-align: middle;
-  margin: 1vw;
+  margin-top: 1vw;
 }
 
 .globe {
   width: 6vw;
+  display: none;
 }
 
 /* Skills */
@@ -122,9 +146,10 @@ h2 {
   background-color: transparent;
 }
 
-.skills h3 {
+.skill h3 {
   align-items: center;
   font-size: 2vw;
+  color: #373f58;
   margin-block-start: 2vw;
   margin-block-end: 1vw;
   font-weight: bold;
@@ -149,6 +174,7 @@ h2 {
 }
 
 .project-card {
+  color: #373f58;
   display: none; /* javascript enables slides, hide by default */
   height: 50vw;
 }
@@ -165,7 +191,7 @@ h2 {
 
 .project-card-info a {
   text-decoration: none;
-  color: black;
+  color: #373f58;
 }
 
 .project-card-info a:hover {
@@ -177,8 +203,8 @@ h2 {
 }
 
 .project-image-div {
-  border: 1vw solid rgba(0, 0, 255, 0.1);
-  background-color: rgba(0, 0, 255, 0.31);
+  border: 1vw solid #978fb2;
+  background-color: #978fb289;
   height: 34vw;
   overflow: hidden;
   display: flex; /* flexbox centers image inside project-image-div */
@@ -195,14 +221,13 @@ h2 {
   font-size: 1.5vw;
   width: 80vw; 
   text-align: center; 
-  color: gray;
 }
 
 /* Next & previous buttons */
 
 .prev, .next {
   cursor: pointer;
-  color: #4637ca;
+  color: #414268;
   font-weight: bold;
   font-size: 4vw;
   border-radius: 0.3vw;
@@ -226,14 +251,24 @@ h2 {
 }
 
 /* Fading animation */
-.fade-in {
+.fade-out {
   position: relative;
-  animation: fade 1s ease;
+  animation: out 0.5s linear;
 }
 
-@keyframes fade {
-  0% { opacity: 0.8;}
-  100% {opacity: 1;}
+@keyframes out {
+  0% { margin-right:0; opacity: 1;}
+  100% {margin-right:50vw; opacity : 0;}
+}
+
+.fade-in {
+  position: relative;
+  animation: in 0.5s linear;
+}
+
+@keyframes in {
+  0% { margin-left:50vw; opacity: 0;}
+  100% {margin-left:0; opacity : 1;}
 }
 
 /* Certifications */
@@ -261,6 +296,7 @@ h2 {
   height: 15vw;
   width: 15vw;
   padding: 1%;
+  color: #373f58;
   font-size: 1.5vw;
   box-shadow: 0 0.5vw 1vw gray;
   margin-block-start: 2%;
@@ -285,7 +321,7 @@ h2 {
 
 .cert a { 
   text-decoration: none;
-  color: #4637ca;
+  color: #60819a;
   font-size: 1.2vw;
 }
 
@@ -341,7 +377,7 @@ h2 {
 }
 
 .top-anchor img {
-  background-color: #4637ca;
+  background-color: #524f7b;
   width: 4vw;
   border-radius: 100%;
   box-shadow: 
