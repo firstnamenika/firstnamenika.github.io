@@ -7,13 +7,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // Next/previous controls
 function plusSlides(n) {
-  let images = document.getElementsByClassName('project-image');
-  let currentSlideIndex = slideIndex;
-  images[currentSlideIndex - 1].classList.add('fade-in'); // Add fade-in animation to the current slide
-  
-  setTimeout(() => {
-    showSlides((slideIndex += n));
-  }, 1000); // Wait for 1 second (same duration as the fade-in animation) before transitioning to the next slide
   showSlides((slideIndex += n));
 }
 
@@ -40,7 +33,7 @@ function showSlides(n) {
     console.log("Setting display to block for slide:", slideIndex);
     for (let i = 0; i < slides.length; i++) {
       slides[i].style.display = "none";
-      images[i].classList.remove('fade-in'); // Remove the fade-in class from all slides
+    
     }
   
     slides[slideIndex - 1].style.display = "block"; // Show a slide
