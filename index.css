@@ -5,7 +5,7 @@ body {
 
 /* Navigation Bar */
 
- .topdiv {
+ .home {
   border-bottom: 0.1vw solid #524f7b;
   background: #b0aabc;
   padding-left: 3vw;
@@ -16,10 +16,6 @@ body {
   justify-content: space-between;
 }
 
-.topdiv:hover {
-  background: linear-gradient(-65deg, #b0aabc, #877d95);
-  transition-duration: 5s ease;
-}
 
 .topmenu {
   color: #524f7b;
@@ -103,11 +99,6 @@ h2 {
   height: fit-content;
   vertical-align: middle;
   margin-top: 1vw;
-}
-
-.globe {
-  width: 6vw;
-  display: none;
 }
 
 /* Skills */
@@ -328,9 +319,6 @@ h2 {
 .cert a:hover { 
   text-decoration:underline;
 }
-
-  /* background: 
-    radial-gradient(circle at 160%, rgba(13, 16, 117, 0.222), rgba(168, 170, 221, 0.522) 50%, #eee 75%, rgba(102, 105, 214, 0.522) 75%);*/
 
 /* Links */
 
