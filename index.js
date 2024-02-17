@@ -10,9 +10,6 @@ function plusSlides(n) {
   showSlides((slideIndex += n));
 }
 
-    
-  
-
   // Thumbnail image controls
 function currentSlide(n) {
     showSlides((slideIndex = n));
@@ -54,7 +51,32 @@ function showTopAnchor() {
 
 window.onscroll =  showTopAnchor; // Show Top button if window is scrolled 
 
+function showCredential(id) {
+  let credential = document.getElementById(id).querySelector('.credential');
+  let closeButton = document.getElementById('close-button');
+  let overlay = document.getElementById('overlay');
 
+  overlay.style.display = 'block';
+  credential.style.display = 'block';
+  closeButton.style.display = 'block';
+  
+  }
+
+function closeCredential() {
+  let credentials = document.getElementsByClassName('credential');
+  let closeButton = document.getElementById('close-button');
+  let overlay = document.getElementById('overlay');
+
+  for (let i = 0; i < credentials.length; i++) {
+    credentials[i].style.display = 'none';
+  }
+
+  closeButton.style.display = 'none';
+  overlay.style.display = 'none';
+}
+    
+
+  
 
 
 
