@@ -267,6 +267,7 @@ h2 {
 .click-to-see {
   margin-top: 6vw;
   color: #524f7bbe;
+  /*z-index: 9997;  display over other elements for smooth floathing */
 }
 
 .click-to-see p {
@@ -274,6 +275,19 @@ h2 {
   border: 0.1vw solid rgba(168, 170, 221, 0.122);
   border-radius: 1vw;
   padding: 1vw;
+}
+
+.move-left {
+  animation: move-left 5s linear;
+}
+
+@keyframes move-left {
+  0% {margin-left: 0vw; color:#414268}
+  25% {margin-left: -5vw;color:#830f0f}
+  50% {margin-left:-10vw; color:purple}
+  75% {margin-left:-5vw; color:#441e76}
+  99% {margin-left:0.1vw;color:#414268}
+  100% {margin-left:0vw;color:#524f7bbe}
 }
 
 /* Certifications container */

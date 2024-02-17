@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", function() {
   // Add slides
   var slideIndex = 1;
   showSlides(slideIndex);
+
   return slideIndex
 });
 
@@ -49,7 +50,17 @@ function showTopAnchor() {
   }
 }
 
-window.onscroll =  showTopAnchor; // Show Top button if window is scrolled 
+//once #certifications reach middle of the screen move 'click to see' div to the left
+function moveLeft() {
+  const clickToSee = document.getElementById('click-to-see');
+
+  if (window.scrollY > 1500) {
+    clickToSee.classList.add('move-left'); // Add an effect to click-to-see div    
+  }
+
+}
+
+window.addEventListener('scroll', () => { showTopAnchor(); moveLeft(); });// listen to scrolling
 
 function showCredential(id) {
   let credential = document.getElementById(id).querySelector('.credential');
@@ -74,6 +85,12 @@ function closeCredential() {
   closeButton.style.display = 'none';
   overlay.style.display = 'none';
 }
+
+
+
+
+
+
     
 
   
