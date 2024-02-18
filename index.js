@@ -69,8 +69,12 @@ function showCredential(id) {
 
   overlay.style.display = 'block';
   credential.style.display = 'block';
+  credential.classList.add('credential-appear');
   closeButton.style.display = 'block';
-  
+
+  setTimeout(function() {
+    credential.classList.remove('credential-appear');
+  }, 500)  
   }
 
 function closeCredential() {
@@ -79,11 +83,20 @@ function closeCredential() {
   let overlay = document.getElementById('overlay');
 
   for (let i = 0; i < credentials.length; i++) {
-    credentials[i].style.display = 'none';
+
+    if (credentials[i].style.visibility = 'visible') {
+
+      credentials[i].classList.add('credential-disappear');
+
+      setTimeout(function() {
+        credentials[i].style.display = 'none';
+        closeButton.style.display = 'none';
+        overlay.style.display = 'none';
+        credentials[i].classList.remove('credential-disappear');
+      }, 200)
+    }
   }
 
-  closeButton.style.display = 'none';
-  overlay.style.display = 'none';
 }
 
 

@@ -12,21 +12,11 @@ body {
 }
 
 @keyframes gradient {
-	0% {
-		background-position: 0% 100%;
-	}
-  25% {
-    background-position: 40% 100%;
-  }
-	50% {
-		background-position: 100% 100%;
-	}
-  75% {
-    background-position: 40% 100%;
-  }
-	100% {
-		background-position: 0% 100%;
-	}
+	0% {background-position: 0% 100%;}
+  25% {background-position: 40% 100%;}
+	50% {background-position: 100% 100%;}
+  75% {background-position: 40% 100%;}
+	100% {background-position: 0% 100%;}
 }
 
 /* Navigation Bar */
@@ -267,7 +257,6 @@ h2 {
 .click-to-see {
   margin-top: 6vw;
   color: #524f7bbe;
-  /*z-index: 9997;  display over other elements for smooth floathing */
 }
 
 .click-to-see p {
@@ -360,6 +349,25 @@ h2 {
   z-index: 9999;  /* Credential is displayed on top of overlay*/
 }
 
+.credential-appear {
+  animation: appear 0.2s linear;
+}
+
+@keyframes appear {
+  from {width: 60%;}
+  to {width:70%;}
+}
+
+.credential-disappear {
+  animation: disappear 0.2s ease;
+}
+
+@keyframes disappear {
+  0% {width: 70%; opacity: 1;}
+  25% {width: 65%; opacity: 0.1;}
+  100% {width: 0%;opacity: 0;}
+}
+
 .close-button {
   display: none;
   position: fixed;
@@ -431,6 +439,11 @@ h2 {
 
 .top-appear {
   animation: fade 1s ease;
+}
+
+@keyframes fade {
+  from {opacity: 0.8;}
+  to {opacity:1;}
 }
 
 .top-anchor {
