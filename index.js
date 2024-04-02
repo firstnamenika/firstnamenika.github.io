@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
   // Add slides
-  var slideIndex = 1;
+  const slideIndex = 1;
   showSlides(slideIndex);
 
   return slideIndex
@@ -18,8 +18,10 @@ function currentSlide(n) {
 
 function showSlides(n) {
     let slides = document.getElementsByClassName("project-card");
-    let images = document.getElementsByClassName("project-image");
+    // let images = document.getElementsByClassName("project-image");
     console.log("Number of slides:", slides.length);
+
+    // if n > 0 
   
     if (slides.length === 0) {
       console.log("No cards in this array");
@@ -41,7 +43,7 @@ function showSlides(n) {
 function showTopAnchor() {
   const topAnchor = document.getElementById('top');
   
-  if (window.scrollY > 200) {
+  if (window.scrollY > 200) {// if scrolled over 200 pixels
     topAnchor.style.display = 'block'; // Show Top button
     topAnchor.classList.add('top-appear'); // Add an effect to Top button
   } else {
@@ -62,46 +64,63 @@ function moveLeft() {
 
 window.addEventListener('scroll', () => { showTopAnchor(); moveLeft(); });// listen to scrolling
 
-function showCredential(id) {
-  let credential = document.getElementById(id).querySelector('.credential');
-  let closeButton = document.getElementById('close-button');
-  let overlay = document.getElementById('overlay');
+function listenToCredentials() {
+  const certContainer = document.querySelector('.cert-container');
+  certContainer.addEventListener('click', function(event) {
+    const card = event.target.closest('.card');
+    if (card) {
+      showCredential(card.id);
+    } else {
+      console.log('Couldn\'t access cards');
+    }
+  });
+}
 
+function addCloseButton(id) {
+  const closeButton = document.querySelector('.close-button');
+  closeButton.style.display = 'block';
+console.log(closeButton.style.display, ' inside addclosebutton');
+  closeButton.addEventListener('click', function() {
+    closeCredential(id);
+  })
+}
+
+function showCredential(id) {
+  addCloseButton(id);
+
+  const credential = document.getElementById(id).querySelector('.credential');
+  
+  let overlay = document.getElementById('overlay');
   overlay.style.display = 'block';
   credential.style.display = 'block';
   credential.classList.add('credential-appear');
-  closeButton.style.display = 'block';
+  
 
   setTimeout(function() {
     credential.classList.remove('credential-appear');
   }, 500)  
   }
 
-function closeCredential() {
-  let credentials = document.getElementsByClassName('credential');
-  let closeButton = document.getElementById('close-button');
+function closeCredential(id) {
+  // console.log(`this is id of cred: ${id}`);
+  const credential = document.getElementById(id).querySelector('.credential');
+  let closeButton = document.querySelector('.close-button');
   let overlay = document.getElementById('overlay');
 
-  for (let i = 0; i < credentials.length; i++) {
+  credential.classList.add('credential-disappear');
 
-    if (credentials[i].style.visibility = 'visible') {
+  setTimeout(function() {
+    credential.style.display = 'none';
+    closeButton.style.display = 'none';
+    overlay.style.display = 'none';
 
-      credentials[i].classList.add('credential-disappear');
-
-      setTimeout(function() {
-        credentials[i].style.display = 'none';
-        closeButton.style.display = 'none';
-        overlay.style.display = 'none';
-        credentials[i].classList.remove('credential-disappear');
+    credential.classList.remove('credential-disappear');
       }, 200)
     }
-  }
-
-}
 
 
 
-
+listenToCredentials();
 
 
     
