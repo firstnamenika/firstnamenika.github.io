@@ -8,7 +8,7 @@ body {
 .linear-gradient {
   background: linear-gradient( -65deg, #796e88,#877d95,#b6afc4, #bfb9cc, #877d95, #796e88);
   background-size: 150% 150%;
-	animation: gradient 12s linear infinite;
+	animation: gradient 11s linear infinite;
 }
 
 @keyframes gradient {
