@@ -342,11 +342,50 @@ h2 {
   width: 70%;
   max-height: 99%;
   top: 50%;
-  left: 50%;
+  /* left: 50%; */
+  left: 39%; /* moved to the left so that i can display details */
   transform: translate(-50%, -50%);
   background-color: white;
   border: 1vw solid #978fb2;
   z-index: 9999;  /* Credential is displayed on top of overlay*/
+}
+
+.credential-details {
+  display: none;
+  position: fixed;
+  bottom: 17%;
+  right: 2%;
+  width: 25%;
+  z-index: 9999;
+  background-color:rgb(255, 255, 255);
+  padding: 0.5em;
+  padding-top:2em;
+  padding-bottom: 2em;
+  font-size: 3vh;
+  font-weight: 300;
+  border: 0.3vw solid rgba(98, 73, 77, 0.76);
+  border-top-left-radius: 2vw;
+  border-top-right-radius: 0.5vw;
+  border-bottom-right-radius: 0.5vw;
+  box-shadow: 13px 18px 39px -17px rgba(46,29,82,0.42);
+}
+
+.details-appear {
+  animation: info-appear .5s linear;
+}
+
+.details-disappear {
+  animation: info-disappear 0.2s linear;
+}
+
+@keyframes info-appear {
+  from {right: 0%; }
+  to {right:2%; }
+}
+
+@keyframes info-disappear {
+  from {right: 2%; opacity: 1;}
+  to {right:0%; opacity: 0;}
 }
 
 .credential-appear {
