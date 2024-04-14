@@ -89,20 +89,20 @@ function addCloseButton(id) {
   })
 }
 
-//show credential function
+//show credential overlay function
 function showCredential(id) {
   addCloseButton(id); //add close button to overlay
 
   const credential = document.getElementById(id).querySelector('.credential');
   const credentialDetails = document.getElementById(id).querySelector('.credential-details');
   // console.log(credentialDetails)
-
   const overlay = document.getElementById('overlay');
   
    // add transition
   credential.classList.add('credential-appear');
   credentialDetails.classList.add('details-appear');
 
+  //show elements
   overlay.style.display = 'block';
   credential.style.display = 'block';
   credentialDetails.style.display = 'block';
@@ -136,8 +136,32 @@ function closeCredential(id) {
       }, 200)
   }
 
+// ---------------- test click to copy -------
+const HandleClickToCopy = () => {
+  const email = document.querySelector('.copy-email');
+  email.addEventListener('click', copyEmail);
+}
 
+const copyEmail = () => {
+  console.log('click success');
+  const copyText = document.querySelector('.copy-email').textContent;
+  const copyInfo = document.querySelector('.copy-click');
 
+  try { 
+     // Copy the text inside the text field
+    navigator.clipboard.writeText(copyText);
+  
+    // Alert the copied text
+    copyInfo.innerHTML = 'copied!'
+    console.log(copyText);
+  } catch(error) {
+    alert('Could not copy to clipboard')
+    console.log(`Error: couldnt copy email: ${error}`);
+  }
+}
+// -------------------------------------------
+
+HandleClickToCopy();
 listenToCredentials();
 
 
