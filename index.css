@@ -444,14 +444,24 @@ h2 {
 /* Links */
 
 #links {
-  padding-bottom: 15vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 10em;
+  padding-top: 5em;
+}
+
+#links h2 {
+  text-align: start;
+  width: 90%;
 }
 
 #links-container {
   margin-top: 3%;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  width: 100%;
+  /* flex-wrap: wrap; */
   justify-content: space-evenly;
 }
 
@@ -467,6 +477,39 @@ h2 {
 
 .img-link:hover {
   border-bottom: 0.1vw solid gray;
+}
+
+/* click to copy container */
+.copy-email-container {
+  font-size: 2vh;
+  display: flex;
+  flex-direction: column;
+  align-items:flex-start;
+  justify-content: center;
+  color: #0d0a34;
+}
+
+.copy-email {
+  border: 1px solid #4142686c;
+  background-color: unset;
+  border-radius: 1vw;
+  padding: 0.5em;
+  margin-top: 1.5em;
+  transition: border 100ms linear 40ms; 
+  background-color: 400ms linear 80ms;
+  font-size: 3vh;
+}
+
+.copy-email:hover {
+  border: 1px solid #a6a7cc6c;
+  background-color: #e0dde448;
+  cursor: pointer;
+}
+
+.copy-click {
+  align-self: end;
+  margin-right: 1vw;
+  color: #524f7b;
 }
 
 /* Scroll to Top Button */
@@ -540,6 +583,8 @@ footer ul {
   text-decoration: underline;
 }
 
-.copy {
+.copyright {
   margin-left: 1vw;
 }
+
+
