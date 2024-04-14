@@ -1,6 +1,7 @@
 body {
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   margin: 0;
+  border-bottom: 1vh solid #524f7b;
+  font-family: "Lato", sans-serif;
 }
 
 /* Gradient animation */
@@ -512,4 +513,33 @@ h2 {
   background-color: rgb(151, 144, 171);
 }
 
+/* Footer */
 
+footer {
+  border-top: 1px solid #524f7b;
+  background-color: rgba(151, 144, 171, 0.406);
+}
+
+footer ul {
+  display: flex;
+  gap: 12%;
+  justify-content: center;
+}
+
+.footer-li {
+  list-style: none;
+  letter-spacing: 0.1vw;;
+}
+
+.footer-li a {
+  text-decoration: none;
+  color: black;
+}
+
+.footer-li a:hover {
+  text-decoration: underline;
+}
+
+.copy {
+  margin-left: 1vw;
+}
