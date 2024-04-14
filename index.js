@@ -43,7 +43,7 @@ function showSlides(n) {
 function showTopAnchor() {
   const topAnchor = document.getElementById('top');
   
-  if (window.scrollY > 200) {// if scrolled over 200 pixels.
+  if (window.scrollY > 200) {// if scrolled over 200 pixels
     topAnchor.style.display = 'block'; // Show Top button
     topAnchor.classList.add('top-appear'); // Add an effect to Top button
   } else {
