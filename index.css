@@ -384,7 +384,6 @@ footer ul {
 /* ----------------------------------------------------med--- */
 @media (min-width: 680px) and (max-width: 1280px) {
   body {
-    border: solid purple;
     margin: 0;
     border-bottom: 1vh solid #524f7b;
     font-family: "Lato", sans-serif;
@@ -771,7 +770,6 @@ footer ul {
     margin: 0;
     border-bottom: 1vh solid #524f7b;
     font-family: "Lato", sans-serif;
-    border: solid red;
   }
 
   /* Gradient animation */
