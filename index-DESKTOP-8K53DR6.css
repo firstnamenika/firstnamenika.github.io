@@ -1,0 +1,476 @@
+body {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  margin: 0;
+}
+
+/* Gradient animation */
+
+.linear-gradient {
+  background: linear-gradient( -65deg, #796e88,#877d95,#b6afc4, #bfb9cc, #877d95, #796e88);
+  background-size: 150% 150%;
+	animation: gradient 11s linear infinite;
+}
+
+@keyframes gradient {
+	0% {background-position: 0% 100%;}
+  25% {background-position: 40% 100%;}
+	50% {background-position: 100% 100%;}
+  75% {background-position: 40% 100%;}
+	100% {background-position: 0% 100%;}
+}
+
+/* Navigation Bar */
+
+ .home {
+  border-bottom: 0.1vw solid #524f7b;
+  padding-left: 3vw;
+  padding-right: 3vw;
+  padding-top: 0.5vw;
+  padding-bottom: 0.5vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+.home:hover {
+  background-color: #796e881d;
+}
+
+
+.topmenu {
+  color: #373f58;
+  font-size: 2vw;
+  width: 8vw;
+  text-decoration: none;
+  letter-spacing: 0;
+  transition: letter-spacing 0.3s linear;
+}
+
+.topmenu:hover {
+  font-weight: bolder;
+  letter-spacing: 0.09vw;
+}
+
+
+/* Titles */
+
+h2 {
+  text-align: justify;
+  font-size: 5vw;
+  text-align: center;
+  float: left;
+  color: #524f7b;
+  margin: 3vw;
+  margin-left: 6vw;
+  margin-top: 4vw;
+  margin-bottom: 0vw;
+}
+
+/* About Me */
+
+.container {
+  border-bottom: 0.1vw solid #524f7b;
+  display: flex;
+}
+
+.image-div {
+  margin-left: 8vw;
+}
+
+#about-me{
+  margin-left: -10vw;
+}
+
+#about-me h1 {
+  font-size: 5vw;
+  margin-top: 6vw;
+  color: #524f7b;
+}
+
+#about-me p {
+  font-size: 2vw;
+  color: #373f58/* #c8c6cd*/;
+  margin-top: -2vw;
+}
+
+.profile-image {
+  width: 48vw;
+  height: fit-content;
+  vertical-align: middle;
+  margin-top: 1vw;
+}
+
+/* Skills */
+
+#skills {
+  background-color:rgba(168, 170, 221, 0.122);
+  padding-bottom: 3vw;
+}
+
+.all_skills {
+  display: flex;
+  flex-direction: row;
+  flex-flow: wrap;
+  justify-content: center;
+}
+
+.skill {
+  border: 1% solid gray;
+  background: linear-gradient(to bottom, rgba(168, 170, 221, 0.250) 0%,rgba(168, 170, 221, 0.100) 100%);
+  display: block;
+  border-radius: 6%;
+  text-align: center;
+  margin: 2%;
+  height: 15vw;
+  width: 15vw;
+  padding: 1%;
+  font-size: 1.5vw;
+  box-shadow: 0 0.5vw 1vw gray;
+  margin-block-start: 1%;
+  margin-block-end: 1%;
+}
+
+.skill img {
+  height: 3.5vw;
+  align-items: center;
+  background-color: transparent;
+}
+
+.skill h3 {
+  align-items: center;
+  font-size: 2vw;
+  color: #373f58;
+  margin-block-start: 2vw;
+  margin-block-end: 1vw;
+  font-weight: bold;
+} 
+
+.skill p {
+  align-content: flex-end;
+  color: gray;
+  font-size: smaller;
+}
+
+/* Projects */
+
+.projects {
+  position: relative;
+}
+
+.projects-container {
+  width: 80vw;
+  height: 50vw;
+  margin: 0 auto;
+}
+
+.project-card {
+  color: #373f58;
+  display: none; /* javascript enables slides, hide by default */
+  height: 50vw;
+}
+
+.project-card-info {
+  font-size: 2vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-direction: row;
+  text-wrap: nowrap;
+  margin-bottom: -2vw;
+}
+
+.project-card-info a {
+  text-decoration: none;
+  color: #373f58;
+}
+
+.project-card-info a:hover {
+  border-bottom: 0.1vw solid black;
+}
+
+.github-icon {
+  width: 6vw;
+}
+
+.project-image-div {
+  border: 1vw solid #978fb2;
+  background-color: #978fb289;
+  height: 34vw;
+  overflow: hidden;
+  display: flex; /* flexbox centers image inside project-image-div */
+  justify-content: center; /* flexbox */
+  align-items: center; /* flexbox */
+}
+
+.project-image {
+  max-height: 34vw;
+  max-width:78vw;
+}
+
+.caption {
+  font-size: 1.5vw;
+  width: 80vw; 
+  text-align: center; 
+}
+
+/* Next & previous buttons */
+
+.prev, .next {
+  cursor: pointer;
+  color: #414268;
+  font-weight: bold;
+  font-size: 4vw;
+  border-radius: 0.3vw;
+  transition: 0.6s ease;
+  position: absolute;
+  top: 25vw;
+}
+
+.prev {
+  left: 2vw;
+  padding: 4vw 2vw 4vw 4vw;
+}
+
+.next {
+  right: 2vw;
+  padding: 4vw 4vw 4vw 2vw;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(168, 170, 221, 0.322);
+}
+
+/* Certifications */
+
+.certifications {
+  background-color:rgba(168, 170, 221, 0.122);
+  padding-bottom: 5vw;
+}
+
+.cert-head {
+  display: flex;
+  flex-direction: row;
+  gap: 30%;
+  align-items:center;
+}
+
+/* Click to see */
+.click-to-see {
+  margin-top: 6vw;
+  color: #524f7bbe;
+}
+
+.click-to-see p {
+  background-color: rgba(168, 170, 221, 0.122);
+  border: 0.1vw solid rgba(168, 170, 221, 0.122);
+  border-radius: 1vw;
+  padding: 1vw;
+}
+
+.move-left {
+  animation: move-left 5s linear;
+}
+
+@keyframes move-left {
+  0% {margin-left: 0vw; color:#414268}
+  25% {margin-left: -5vw;color:#830f0f}
+  50% {margin-left:-10vw; color:purple}
+  75% {margin-left:-5vw; color:#441e76}
+  99% {margin-left:0.1vw;color:#414268}
+  100% {margin-left:0vw;color:#524f7bbe}
+}
+
+/* Certifications container */
+
+.cert-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  padding: 0.4%;
+  margin-block-start: 2%;
+  margin-inline-end: 3%;
+}
+
+.cert {
+  border: transparent;
+  background: linear-gradient(to bottom, rgba(168, 170, 221, 0.250) 0%,rgba(168, 170, 221, 0.100) 100%);
+  display: block;
+  border-radius: 6%;
+  text-align: center;
+  height: 17vw;
+  width: 17vw;
+  box-shadow: 0 0.5vw 1vw gray;
+  display: flex; /* flexbox */
+  justify-content: center;
+  align-items: center; /* flexbox */
+  flex-direction: column;
+}
+
+.cert h3 {
+  color: #373f58;
+  font-size: 1.8vw;
+}
+
+.cert p {
+  font-size: 1.2vw;
+  color: gray;
+}
+
+.cert:hover {
+  cursor: pointer;
+  background-color: rgba(168, 170, 221, 0.1);
+}
+
+ /* Credential overlay*/
+
+.overlay {
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(91, 99, 249, 0.2); 
+  z-index: 9998; /* Overlay is displayed first*/
+}
+
+.credential {
+  display: none;
+  position: fixed;
+  width: 70%;
+  max-height: 99%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border: 1vw solid #978fb2;
+  z-index: 9999;  /* Credential is displayed on top of overlay*/
+}
+
+.credential-appear {
+  animation: appear 0.2s linear;
+}
+
+@keyframes appear {
+  from {width: 60%;}
+  to {width:70%;}
+}
+
+.credential-disappear {
+  animation: disappear 0.2s ease;
+}
+
+@keyframes disappear {
+  0% {width: 70%; opacity: 1;}
+  25% {width: 65%; opacity: 0.1;}
+  100% {width: 0%;opacity: 0;}
+}
+
+.close-button {
+  display: none;
+  position: fixed;
+  z-index: 10000;  /* Close button is displayed on top*/
+}
+
+.close-button button {
+  width: 4vw;
+  height: 4vw;
+  border: none;
+  border-radius: 100%;
+  background-color: #524f7b;
+  box-shadow: 
+    0.1vw 0.3vw 0.5vw #373f58;
+  position: fixed;
+  right: 8%;
+  top: 10%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;  
+  justify-content: center; 
+  transition: 1s ease;
+}
+
+.close-button button:hover {
+  background-color: rgb(151, 144, 171);
+}
+
+.close-img {
+  width: 2vw;
+  margin: 0;
+}
+
+/* Links */
+
+#links {
+  padding-bottom: 15vw;
+}
+
+#links-container {
+  margin-top: 3%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.link {
+  padding-top:2%;
+}
+
+.img-link {
+  width: 18vw;
+  transition: ease-in-out;
+  transition-duration:2s ;
+}
+
+.img-link:hover {
+  border-bottom: 0.1vw solid gray;
+}
+
+/* Scroll to Top Button */
+
+.top {
+  display: none;
+  width: 4vw;
+  height: 4vw;
+}
+
+.top-appear {
+  animation: fade 1s ease;
+}
+
+@keyframes fade {
+  from {opacity: 0.8;}
+  to {opacity:1;}
+}
+
+.top-anchor {
+  transition: 1s ease;
+}
+
+.top-anchor img {
+  background-color: #524f7b;
+  width: 4vw;
+  border-radius: 100%;
+  box-shadow: 
+    0.1vw 0.3vw 0.5vw  rgb(128, 128, 128);
+  color:aliceblue;
+  font-family: monospace;
+  font-weight: bolder;
+  text-decoration: none;
+  align-items: center;  
+  justify-content: center; 
+  position: fixed;
+  right: 3%;
+  bottom: 3%;
+  cursor: pointer;
+  transition: 1s ease;
+}
+
+.top-anchor img:hover {
+  background-color: rgb(151, 144, 171);
+}
+
+
